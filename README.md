@@ -1,6 +1,6 @@
 A Vive SRWorks Hand Interaction example for Unity
 
-The example sceme shows how to occlude and interact with virtual objects with your hands
+The example scene shows how to occlude and interact with virtual objects (a sphere and a cube) with your hands.
 
 - In this example, by default the occlusion is using a depth mask (you can enable/disable it in the Manager object)
 
@@ -8,13 +8,14 @@ The example sceme shows how to occlude and interact with virtual objects with yo
 
 ![Manager](./readme_images/manager.png)
 
-- To slap/punch (without going through) enable the HandRacketCollisionObj in the scene 
-  (you can make it visible by enabling the Mesh Renderer on it)
+- To slap/punch (without going through the object) enable the HandRacketCollisionObj in the scene 
+  (you can optionally make it visible by enabling the Mesh Renderer on it)
   
 ![CollisionObj](./readme_images/CollisionObj.png)
 
-- Depth mask occlusion settings can be edited at runtime in the inspector on the DualCamera (head) object 
-  in addition to the Game Window SRWorks settings that can be called up by pressing the S and R keys. For more info:
+- Depth mask occlusion settings can be edited at runtime in the inspector on the DualCamera (head) object
+  in addition to using the SRWorks settings in the game window that can be called up by pressing the S and R keys at the same time.
+  For more info:
   http://community.viveport.com/t5/Vive-SRWorks-SDK/Use-Depth-Image-to-Occlude-Virtual-Objects-in-Unity/gpm-p/20707#M229
 
 Requirements: 
