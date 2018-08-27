@@ -15,8 +15,8 @@ ProjectSettings/*
 Assets/*
 !Assets/ViveSRWorksHand/
 !Assets/ViveSRWorksHand.meta
-!Assets/Scenes/
-!Assets/Scenes.meta
+!Assets/DemoScene/
+!Assets/DemoScene.meta
 
 *.cfg
 *.log
