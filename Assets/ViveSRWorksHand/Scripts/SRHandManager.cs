@@ -2,7 +2,7 @@
 using UnityEngine;
 using Vive.Plugin.SR;
 
-public class HandDemoScene : MySingleton<HandDemoScene>
+public class SRHandManager : MySingleton<SRHandManager>
 {
     public GameObject handRacketMover;
     public GameObject depthMask;
