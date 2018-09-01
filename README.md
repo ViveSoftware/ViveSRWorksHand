@@ -22,3 +22,9 @@ Requirements:
 - VIVE Pro (make sure cameras are enabled and working in settings)
 - ViveSRWorks Unity package: Vive-SRWorks-0.7.5.0-Unity-Plugin.unitypackage
 Download the VIVE SRWorks SDK from: http://developer.vive.com/resources
+
+Note: tested on Unity 2018.2.5f1 
+  Earlier versions seems to have prefab issues on importing so will export unitypackage from an earlier version soon.
+  For now, here's what it looks like:
+  
+![HandScene](./readme_images/HandScene.png)
