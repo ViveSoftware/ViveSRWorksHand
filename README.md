@@ -1,6 +1,9 @@
 A Vive SRWorks Hand Interaction example for Unity
 
-The example scene shows how to occlude and interact with virtual objects (a sphere and a cube) with your hands.
+
+![screenshot](./readme_images/screenshot.png)
+
+The example scene included shows how to occlude and interact with virtual objects (a sphere and a cube) with your hands.
 
 - In this example, by default the occlusion is using a depth mask (you can enable/disable it in the Manager object)
 
