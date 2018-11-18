@@ -20,8 +20,9 @@ public class SRWorksHand : MySingleton<SRWorksHand>
     static bool isEnableDepth;
     public static void OpenDynamicHandCollider()
     {
-        if (isEnableDepth)
-            return;
+        Debug.LogWarning("OpenDynamicHandCollider");
+   //     if (isEnableDepth)
+   //         return;
         isEnableDepth = true;
         ViveSR_DualCameraImageCapture.EnableDepthProcess(true);
         ViveSR_DualCameraDepthCollider.UpdateDepthCollider = true;
@@ -90,7 +91,8 @@ public class SRWorksHand : MySingleton<SRWorksHand>
         if (_dynamicHandMesh == null)
         {
             Transform handCollider = GetDynamicHand();
-            _dynamicHandMesh = handCollider.GetComponent<MeshFilter>().mesh;
+            if(handCollider!=null)
+                _dynamicHandMesh = handCollider.GetComponent<MeshFilter>().mesh;
         }
         return _dynamicHandMesh;
     }

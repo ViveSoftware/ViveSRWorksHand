@@ -8,19 +8,19 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1877808808078960}
-  m_IsPrefabAsset: 1
---- !u!1 &1877808808078960
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1325028295477620}
+  m_IsPrefabParent: 1
+--- !u!1 &1325028295477620
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
+  serializedVersion: 5
   m_Component:
-  - component: {fileID: 4463904598622950}
-  - component: {fileID: 114701040911515854}
-  - component: {fileID: 114402506440998430}
+  - component: {fileID: 4372407139801650}
+  - component: {fileID: 114453581304663162}
+  - component: {fileID: 114084852135292966}
   m_Layer: 0
   m_Name: SRWorksHand
   m_TagString: Untagged
@@ -28,12 +28,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4463904598622950
+--- !u!4 &4372407139801650
 Transform:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1877808808078960}
+  m_GameObject: {fileID: 1325028295477620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,37 +41,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114402506440998430
+--- !u!114 &114084852135292966
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1877808808078960}
+  m_GameObject: {fileID: 1325028295477620}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 49051db3cbcaf7448a77d3c0386917ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showHandMesh: 0
+  showHandMesh: 1
   handSizeRange: 0.15
   DebugShow: 0
   handMaterial: {fileID: 2100000, guid: c3e9333e75968484f894d1f93d7f4024, type: 2}
-  viveSR: {fileID: 0}
+  viveSR: {fileID: 114030089609639150, guid: 043c7faf0fdcecd499d4424a614b2482, type: 2}
   eye: {fileID: 0}
   dynamicHandDisDivided: 0.2
   _OutNear: {x: 0, y: 0, z: 0}
   _OutFar: {x: 0, y: 0, z: 0}
---- !u!114 &114701040911515854
+--- !u!114 &114453581304663162
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1877808808078960}
+  m_GameObject: {fileID: 1325028295477620}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79d8999e97457ad44afbb90831b1b675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   handRacketMover: {fileID: 0}
-  depthMask: {fileID: 0}
+  depthMask: {fileID: 1854828209721920, guid: 44796e0087354784594379b0f3844f6e, type: 2}
   enableDepthMask: 1

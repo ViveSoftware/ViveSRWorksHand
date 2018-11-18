@@ -6,6 +6,7 @@ public class SRHandManager : MySingleton<SRHandManager>
 {
     public GameObject handRacketMover;
     public GameObject depthMask;
+    private GameObject depthMaskR;
     public bool enableDepthMask;
     private bool prevDepthMaskEnabled;
     private SRWorksHand srWorksHand;
@@ -14,12 +15,29 @@ public class SRHandManager : MySingleton<SRHandManager>
     {
         srWorksHand = gameObject.GetComponent<SRWorksHand>();
 
-        // add depth mask for occlusion
-        GameObject anchor = GameObject.Find("Anchor (Left)");//SRWorkHand.Instance.viveSR.transform.Find("Anchor (Left)");
-        GameObject quad = Instantiate(depthMask);//GameObject.CreatePrimitive(PrimitiveType.Quad);
-        quad.transform.parent = anchor.transform;
-        quad.name = "DepthMask";
-        quad.SetActive(true);
+        if (srWorksHand.showHandMesh)
+            enableDepthMask = false;
+
+        // get depth mask for occlusion
+        GameObject root = GameObject.Find("Anchor (Left)");
+        Transform trans = root.transform.Find("DepthMask (left)");
+        GameObject depthObjectTest = null;
+        if (trans != null)
+            depthObjectTest = trans.gameObject;
+        if(depthObjectTest == null)
+        {
+            GameObject quad = Instantiate(depthMask);
+            quad.transform.parent = root.transform;
+            quad.name = "DepthMask";
+            quad.SetActive(true);
+        }
+        else
+        {
+            depthMask.SetActive(true);
+            root = GameObject.Find("Anchor (Right)");
+            depthMaskR = root.transform.Find("DepthMask (right)").gameObject;
+            depthMaskR.SetActive(true);
+        }
 
         StartLoadReconstructData();
     }
@@ -37,11 +55,16 @@ public class SRHandManager : MySingleton<SRHandManager>
 
         //Set touch hand
         SRWorksHand.Instance.SetDetectHand(null, handRacketMover, null);
-        SRWorksHand.GetDynamicHand().gameObject.layer = LayerMask.NameToLayer("HandTouch");
 
         //enable depth mask
         if (enableDepthMask)
+        {
             ViveSR_DualCameraImageRenderer.UpdateDepthMaterial = true;
+        } else
+        {
+            SRWorksHand.GetDynamicHand().gameObject.layer = LayerMask.NameToLayer("HandTouch");
+        }
+
     }
     private void LateUpdate()
     {
@@ -50,6 +73,11 @@ public class SRHandManager : MySingleton<SRHandManager>
                 ViveSR_DualCameraImageRenderer.UpdateDepthMaterial = true;
             } else {
                 ViveSR_DualCameraImageRenderer.UpdateDepthMaterial = false;
+                if (srWorksHand.showHandMesh)
+                {
+                    SRWorksHand.Instance.SetDetectHand(null, handRacketMover, null);
+//                    SRWorksHand.GetDynamicHand().gameObject.layer = LayerMask.NameToLayer("HandTouch");
+                }
             }
             prevDepthMaskEnabled = enableDepthMask;
         }
