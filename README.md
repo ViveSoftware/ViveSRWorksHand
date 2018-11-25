@@ -23,11 +23,14 @@ The example scene included shows how to occlude and interact with virtual object
 
 Requirements: 
 - VIVE Pro (make sure cameras are enabled and working in settings)
-- ViveSRWorks Unity package: Vive-SRWorks-0.7.5.0-Unity-Plugin.unitypackage
-Download the VIVE SRWorks SDK from: http://developer.vive.com/resources
+- ViveSRWorks Unity package: Vive-SRWorks-0.7.5.0-Unity-Plugin.unitypackage or later versions.
+Download the latest VIVE SRWorks SDK from: http://developer.vive.com/resources
 
-Note: tested on Unity 2018.2.5f1 
-  Earlier versions seems to have prefab issues on importing so will export unitypackage from an earlier version soon.
-  For now, here's what it looks like:
-  
-![HandScene](./readme_images/HandScene.png)
+Note: tested on Unity 2018.2.16f1 
+  Earlier versions seems to have prefab issues on importing so the unity package was made from 2017.4
+
+Note: as of SRWorks v0.8.0.2 the ViveSR prefab requires you to enable the modules you will be using as shown:
+
+
+![ViveSR](./readme_images/ViveSR.png)
+
