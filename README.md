@@ -26,10 +26,12 @@ Requirements:
 - ViveSRWorks Unity package: Vive-SRWorks-0.7.5.0-Unity-Plugin.unitypackage or later versions.
 Download the latest VIVE SRWorks SDK from: http://developer.vive.com/resources
 
-Note: tested on Unity 2018.2.16f1 
-  Earlier versions seems to have prefab issues on importing so the unity package was made from 2017.4
+UPDATE:
 
-Note: as of SRWorks v0.8.0.2 the ViveSR prefab requires you to enable the modules you will be using as shown:
+Note 1: tested on Unity 2018.2.16f1 
+  Earlier versions of Unity had prefab issues on importing so the unity package was updated using 2017.4 but can be updated to Unity's latest release version.
+
+Note 2: as of SRWorks v0.8.0.2 the ViveSR prefab requires you to enable the modules you will be using as shown:
 
 
 ![ViveSR](./readme_images/ViveSR.png)
